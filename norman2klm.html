@@ -2,21 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Norman vs. GOMS vs. KLM – Cognitive Models</title>
-
-  <style>
-    /* Minimal styling allowed in Lab 01: color only */
-    .row-norman { background-color: #fff3cd; } /* warm amber */
-    .row-goms   { background-color: #e7f3ff; } /* light blue */
-    .row-klm    { background-color: #e9f7ef; } /* light green */
-
-    .key-takeaway {
-      background-color: #fff3cd;
-      padding: 0.5em;
-    }
-  </style>
 </head>
-<body>
+
+<body
+  style="
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333333;
+  "
+>
 
   <!-- Page header -->
   <header>
@@ -33,7 +32,6 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
     </ul>
   </nav>
 
@@ -59,21 +57,21 @@
         </thead>
 
         <tbody>
-          <tr class="row-norman">
+          <tr style="background-color: #5e5e5e25;">
             <th scope="row">Norman</th>
             <td>Cognitive / descriptive</td>
             <td>Understanding, errors, feedback, gulfs</td>
             <td>❌ Nothing (no performance prediction)</td>
           </tr>
 
-          <tr class="row-goms">
+          <tr style="background-color: #5e5e5e25;">
             <th scope="row">GOMS</th>
             <td>Predictive / analytic</td>
             <td>Task structure for expert users</td>
             <td>✔ Relative efficiency</td>
           </tr>
 
-          <tr class="row-klm">
+          <tr style="background-color: #5e5e5e25;">
             <th scope="row">KLM</th>
             <td>Predictive / quantitative</td>
             <td>Low-level physical and motor actions</td>
@@ -108,54 +106,13 @@
         </thead>
 
         <tbody>
-          <tr>
-            <th scope="row">K</th>
-            <td>Keystroking</td>
-            <td>Pressing a key (including modifiers)</td>
-            <td>Typing a character or pressing Delete</td>
-          </tr>
-
-          <tr>
-            <th scope="row">B</th>
-            <td>Button press</td>
-            <td>Pressing a mouse button</td>
-            <td>Left-click</td>
-          </tr>
-
-          <tr>
-            <th scope="row">P</th>
-            <td>Pointing</td>
-            <td>Moving pointer to a target</td>
-            <td>Move cursor to an icon</td>
-          </tr>
-
-          <tr>
-            <th scope="row">H</th>
-            <td>Homing</td>
-            <td>Switching hand between devices</td>
-            <td>Keyboard → mouse</td>
-          </tr>
-
-          <tr>
-            <th scope="row">D</th>
-            <td>Drawing</td>
-            <td>Drawing lines using a pointing device</td>
-            <td>Dragging to draw a shape</td>
-          </tr>
-
-          <tr>
-            <th scope="row">M</th>
-            <td>Mental preparation</td>
-            <td>Preparing for a physical action</td>
-            <td>Pause before clicking the correct control</td>
-          </tr>
-
-          <tr>
-            <th scope="row">R</th>
-            <td>System response</td>
-            <td>Waiting for system feedback (if required)</td>
-            <td>Application loading</td>
-          </tr>
+          <tr><th scope="row">K</th><td>Keystroking</td><td>Pressing a key</td><td>Typing a character</td></tr>
+          <tr><th scope="row">B</th><td>Button press</td><td>Pressing a mouse button</td><td>Left-click</td></tr>
+          <tr><th scope="row">P</th><td>Pointing</td><td>Moving pointer</td><td>Move cursor to icon</td></tr>
+          <tr><th scope="row">H</th><td>Homing</td><td>Switching devices</td><td>Keyboard → mouse</td></tr>
+          <tr><th scope="row">D</th><td>Drawing</td><td>Drawing lines</td><td>Dragging to draw</td></tr>
+          <tr><th scope="row">M</th><td>Mental prep</td><td>Preparing action</td><td>Pause before click</td></tr>
+          <tr><th scope="row">R</th><td>System response</td><td>Waiting</td><td>App loading</td></tr>
         </tbody>
       </table>
     </section>
@@ -164,21 +121,14 @@
     <section>
       <h2>Worked Example: Correcting a Single Character</h2>
 
-      <p>
-        Example task: the user notices a single-character error in a mouse-based
-        editor, deletes it, retypes it, and returns to the insertion point.
-      </p>
-
       <ol>
         <li>Move hand to mouse</li>
-        <li>Position mouse after bad character</li>
+        <li>Position mouse</li>
         <li>Return to keyboard</li>
         <li>Delete character</li>
         <li>Type correction</li>
-        <li>Reposition insertion point</li>
+        <li>Reposition cursor</li>
       </ol>
-
-      <p>One possible KLM operator sequence:</p>
 
       <pre>
 H[mouse]
@@ -188,32 +138,25 @@ M K[DELETE]
 K[char]
 H[mouse] M P B[LEFT]
       </pre>
-
-      <p>
-        This sequence illustrates how KLM models only execution-level actions.
-        High-level planning, learning, and interpretation are not represented.
-      </p>
     </section>
 
     <!-- Key takeaways -->
     <section>
       <h2>Key Takeaways</h2>
 
-      <blockquote class="key-takeaway">
+      <blockquote style="background-color: #5e5e5e25;">
         <p>
           <strong>
-            The Keystroke-Level Model consists of seven primitive operators
-            (K, B, P, H, D, M, R) used to predict execution time for expert,
-            error-free interaction, and is a low-level instance of the GOMS framework.
+            KLM predicts execution time using seven primitive operators
+            and is a low-level instance of GOMS.
           </strong>
         </p>
       </blockquote>
 
-      <blockquote class="key-takeaway">
+      <blockquote style="background-color: #5e5e5e25;">
         <p>
           <strong>
-            KLM has only seven operators because it models execution,
-            not thinking about what to do.
+            KLM models execution, not planning or interpretation.
           </strong>
         </p>
       </blockquote>

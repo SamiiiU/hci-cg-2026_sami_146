@@ -4,10 +4,21 @@
   <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
 
+  <!-- Responsive viewport for accessibility -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Page title shown in browser tab and announced by screen readers -->
   <title>Don Norman – Contact</title>
 </head>
-<body>
+
+<body
+  style="
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333333;
+  "
+>
 
   <!-- Page header: identifies the page purpose -->
   <header>
@@ -19,21 +30,17 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="cv.html">CV</a></li>
-
-      <!-- Current page is indicated using aria-current -->
       <li><a href="contact.html" aria-current="page">Contact</a></li>
-
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
     </ul>
   </nav>
 
   <!-- Main landmark: primary content of this page -->
   <main>
     <form action="#" method="post">
-      
+
       <!-- Groups related form controls and provides context -->
       <fieldset>
         <legend>Send a Message</legend>

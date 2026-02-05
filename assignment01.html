@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lab Assignment 01 – Semantic HTML Foundations</title>
 
-  <style>
-    /* Minimal styling allowed in Lab 01 (color + font only) */
-    body { font-family: Arial, sans-serif; }
-    .rule-box { background-color: #fff3cd; }
-    .note-box { background-color: #e7f3ff; }
-    .warning  { color: #7a1f1f; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lab Assignment 01 – Semantic HTML Foundations</title>
 </head>
-<body>
+
+<body
+  style="
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333333;
+  "
+>
 
   <header>
     <h1>Lab Practice &amp; Assignment 01</h1>
@@ -22,25 +25,24 @@
     </p>
   </header>
 
-<section class="note-box">
-  <h2>Official Starter Code &amp; Live Demo</h2>
-  <p>
-    <strong>Starter Code (GitHub Repository):</strong><br>
-    <a href="https://github.com/humeraaa/hci-cg-2026">
-      https://github.com/humeraaa/hci-cg-2026
-    </a>
-  </p>
-  <p>
-    <strong>Live Demo (GitHub Pages):</strong><br>
-    <a href="https://humeraaa.github.io/hci-cg-2026/">
-      https://humeraaa.github.io/hci-cg-2026/
-    </a>
-  </p>
-  <p>
-    <em>This page is the single source of truth for Lab &amp; Assignment 01.</em>
-  </p>
-</section>
-
+  <section >
+    <h2>Official Starter Code &amp; Live Demo</h2>
+    <p>
+      <strong>Starter Code (GitHub Repository):</strong><br>
+      <a href="https://github.com/humeraaa/hci-cg-2026">
+        https://github.com/humeraaa/hci-cg-2026
+      </a>
+    </p>
+    <p>
+      <strong>Live Demo (GitHub Pages):</strong><br>
+      <a href="https://humeraaa.github.io/hci-cg-2026/">
+        https://humeraaa.github.io/hci-cg-2026/
+      </a>
+    </p>
+    <p>
+      <em>This page is the single source of truth for Lab &amp; Assignment 01.</em>
+    </p>
+  </section>
 
   <nav aria-label="Primary navigation">
     <ul>
@@ -54,7 +56,7 @@
   </nav>
 
   <main>
-
+    <hr/>
     <section>
       <h2>Purpose</h2>
       <p>
@@ -64,7 +66,7 @@
       </p>
     </section>
 
-    <section class="rule-box">
+    <section>
       <h2>Starter Project</h2>
       <p>
         You will receive a starter website repository (5 pages). Your task is to improve the HTML
@@ -92,7 +94,7 @@
         <li>KLM (operators and execution-time prediction)</li>
       </ul>
 
-      <p class="note-box">
+      <p style="background-color: #ff000060;">
         <strong>Source restriction:</strong> Use selective and relevant content from
         <strong>Dix et al., Human–Computer Interaction</strong> (Ch. 9 and Ch. 12). You may add hand-designed
         UI sketches/layouts for interaction analysis, but do not introduce unrelated topics or external sources.
@@ -120,43 +122,28 @@
         <tbody>
           <tr>
             <th scope="row">Semantic Structure</th>
-            <td>
-              header, nav, main,<br>
-              section, article, footer
-            </td>
+            <td>header, nav, main,<br>section, article, footer</td>
             <td>
               Use semantic elements according to their meaning:
               <code>header</code> for page header, <code>nav</code> for navigation,
               <code>main</code> for main content, <code>section</code> for thematic grouping,
               <code>article</code> for self-contained content, <code>footer</code> for footer.
             </td>
-            <td>
-              Improves clarity, maintainability, and screen-reader navigation.
-            </td>
-            <td>
-              Using only <code>div</code>; using <code>nav</code> for non-navigation content.
-            </td>
+            <td>Improves clarity, maintainability, and screen-reader navigation.</td>
+            <td>Using only <code>div</code>; using <code>nav</code> for non-navigation content.</td>
           </tr>
 
           <tr>
             <th scope="row">Navigation Structure</th>
-            <td>
-              nav, ul (unordered list),<br>
-              li (list item), a (anchor/link)
-            </td>
+            <td>nav, ul, li, a</td>
             <td>
               Navigation must be structured as a list:
               <code>nav</code> contains a <code>ul</code>,
               the <code>ul</code> contains <code>li</code>,
               and each <code>li</code> contains an <code>a</code> link.
             </td>
-            <td>
-              Screen readers expect menus as a list of destinations.
-            </td>
-            <td>
-              Placing <code>a</code> directly inside <code>ul</code> (missing <code>li</code>);
-              inconsistent navigation across pages.
-            </td>
+            <td>Screen readers expect menus as a list of destinations.</td>
+            <td>Missing <code>li</code>; inconsistent navigation across pages.</td>
           </tr>
 
           <tr>
@@ -166,47 +153,28 @@
               Use exactly one <code>h1</code> per page.
               Use <code>h2</code>, <code>h3</code>, etc. for subsections without skipping levels.
             </td>
-            <td>
-              Provides a clear content hierarchy and supports assistive navigation.
-            </td>
-            <td>
-              Multiple <code>h1</code> elements; skipping from <code>h1</code> to <code>h3</code>.
-            </td>
+            <td>Provides a clear content hierarchy and supports assistive navigation.</td>
+            <td>Multiple <code>h1</code>; skipping from <code>h1</code> to <code>h3</code>.</td>
           </tr>
 
           <tr>
             <th scope="row">Tables (Comparisons)</th>
-            <td>
-              table, caption, thead,<br>
-              tbody, th, td
-            </td>
+            <td>table, caption, thead, tbody, th, td</td>
             <td>
               Use tables only for comparison/tabular data.
               Include <code>caption</code>, <code>thead</code>, <code>tbody</code>,
               and use <code>th</code> with correct <code>scope</code>.
             </td>
-            <td>
-              Makes comparisons readable and accessible to screen readers.
-            </td>
-            <td>
-              Using tables for layout; missing <code>caption</code>;
-              using only <code>td</code> with no headers.
-            </td>
+            <td>Makes comparisons readable and accessible to screen readers.</td>
+            <td>Using tables for layout; missing <code>caption</code>; missing headers.</td>
           </tr>
 
           <tr>
             <th scope="row">Links</th>
-            <td>a (anchor/link)</td>
-            <td>
-              Use descriptive link text that clearly indicates the destination
-              (avoid generic text like “click here”).
-            </td>
-            <td>
-              Links should make sense when read alone (e.g., by a screen reader).
-            </td>
-            <td>
-              “Click here”, “Read more”, or vague links that do not describe the destination.
-            </td>
+            <td>a</td>
+            <td>Use descriptive link text that clearly indicates the destination (avoid “click here”).</td>
+            <td>Links should make sense when read alone.</td>
+            <td>Vague links like “Click here”, “Read more”.</td>
           </tr>
 
           <tr>
@@ -214,15 +182,10 @@
             <td>img, alt</td>
             <td>
               Every <code>img</code> must have an <code>alt</code> attribute.
-              Use meaningful alt text for informative images;
-              use <code>alt=""</code> for decorative images.
+              Use meaningful alt text for informative images; use <code>alt=""</code> for decorative images.
             </td>
-            <td>
-              Provides accessible alternatives and fallback when images fail to load.
-            </td>
-            <td>
-              Missing <code>alt</code>; using file names like “norman.jpg” as alt text.
-            </td>
+            <td>Provides accessible alternatives and fallback when images fail to load.</td>
+            <td>Missing <code>alt</code>; using file names like “norman.jpg” as alt text.</td>
           </tr>
         </tbody>
       </table>
@@ -238,9 +201,11 @@
       </ul>
     </section>
 
-    <section class="rule-box">
+    <hr/>
+
+    <section >
       <h2>CSS Rules (Strict: Minimal Only)</h2>
-      <p class="warning">You may use CSS only for the following properties:</p>
+      <p style="color: #7a1f1f;"><strong>You may use CSS only for the following properties:</strong></p>
       <ul>
         <li><code>color</code></li>
         <li><code>background-color</code></li>
@@ -248,7 +213,7 @@
         <li><code>font-size</code></li>
       </ul>
 
-      <p class="warning">Not allowed in Lab 01:</p>
+      <p style="color: #7a1f1f;"><strong>Not allowed in Lab 01:</strong></p>
       <ul>
         <li>
           No layout or box model:
@@ -261,11 +226,10 @@
       </ul>
 
       <p>
-        CSS can be included using <code>&lt;style&gt;</code> in the page <code>&lt;head&gt;</code>
-        (internal CSS) or inline styles, but keep it minimal.
+        CSS must remain minimal and within the allowed properties list.
       </p>
     </section>
-
+<hr/>
     <section>
       <h2>Submission</h2>
       <ul>
@@ -275,8 +239,9 @@
       </ul>
     </section>
 
-    <section class="note-box">
+    <section >
       <h2>Lab Exam Practice (HTML Foundations)</h2>
+
       <p>
         These practice questions are within Lab 01 scope. They focus on semantic HTML, navigation structure,
         accessibility basics, and tables.
