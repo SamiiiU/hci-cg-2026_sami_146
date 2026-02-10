@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for proper text rendering -->
+  <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
 
-  <!-- Responsive viewport for accessibility -->
+  <!-- Responsive viewport for mobile and accessibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Page title shown in browser tab and screen readers -->
-  <title>Don Norman – Home</title>
+  <!-- Page title shown in browser tab and announced by screen readers -->
+  <title>Home – HCI Portfolio</title>
 </head>
 
 <body
@@ -20,69 +20,102 @@
   "
 >
 
-  <!-- Page header: identifies the site and its purpose -->
-  <header
-    style="
-      
-      color: #222222;
-    "
-  >
-    <h1>Don Norman</h1>
-    <p>Human–Computer Interaction Philosopher</p>
+  <header>
+    <h1>HCI (CS-555) Week 05 Assignment</h1>
+    <p>
+      Student portfolio: semantic HTML + HCI concepts (Norman, GOMS, KLM)
+    </p>
   </header>
 
-  <!-- Primary navigation landmark -->
-  <nav
-    aria-label="Primary navigation"
-    
-  >
+  <nav aria-label="Primary navigation">
     <ul>
-      <li>
-        <a
-          href="index.html"
-          aria-current="page"
-          style="color: #0645ad;"
-        >Home</a>
-      </li>
-      <li><a href="cv.html" style="color: #0645ad;">CV</a></li>
-      <li><a href="contact.html" style="color: #0645ad;">Contact</a></li>
-      <li><a href="analysis.html" style="color: #0645ad;">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html" style="color: #0645ad;">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html" style="color: #0645ad;">Lab 01 Rules</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="principles.html">HCI Principles</a></li>
+      <li><a href="models.html">Interaction Models</a></li>
+      <li><a href="practice.html">Lab Practice</a></li>
     </ul>
   </nav>
 
-  <!-- Main content -->
   <main>
-    <section>
-      <h2>Biography</h2>
 
-      <img
-        src="norman.jpg"
-        alt="Don Norman, a researcher known for human-centered design and usability principles."
-      >
-
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        About Me
+        <span>(Course context)</span>
+      </h2>
       <p>
-        Don Norman is a pioneer in the field of Human–Computer Interaction.
-        He introduced the concept of human-centered design and developed the
-        Seven Stages of Action to explain how users execute and evaluate actions
-        during interaction.
+        I’m <strong>Sami Ullah</strong>. This site is my Week 05 submission for (CS-555) Human–Computer Interaction.
+        The goal is to demonstrate clean, semantic HTML with minimal CSS and explain HCI concepts using the course book.
       </p>
     </section>
+
+    <section style="background-color: #e7f3ff;">
+      <h2>
+        What is HCI?
+        <span>(Page# 3–4)</span>
+      </h2>
+
+      <p>
+        In this course-book framing, HCI is treated as a central concern in systems design.
+        It involves the <strong>design, implementation, and evaluation</strong> of interactive systems
+        in the context of the user’s <strong>task and work</strong>.
+      </p>
+
+      <p>
+        “User” can mean an individual, a group working together, or multiple users in an organization.
+        So HCI is not limited to a single person using a desktop computer.
+      </p>
+    </section>
+
+  
+
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        Short-Term Memory and Chunking
+        <span>(Page# 29–30)</span>
+      </h2>
+
+      <p>
+        The book discusses short-term memory capacity often summarized as <strong>7 ± 2</strong> items.
+        A more practical idea is that people can remember roughly <strong>7 ± 2 chunks</strong>, where a chunk
+        is a meaningful grouping of information.
+      </p>
+
+      <p>
+        Design implication: group related information into chunks so users don’t have to memorize long, unstructured lists.
+      </p>
+    </section>
+
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        Fitts’ Law: size and distance affect target selection time
+        <span>(Chapter 1)</span>
+      </h2>
+
+      <p>
+        The book explains that the time to hit a target depends on the distance to the target and the target’s size.
+        Design implication: important controls should be easier to hit (larger) and easier to reach (closer).
+      </p>
+    </section>
+
+    <section style="background-color: #e7f3ff;">
+      <h2>
+        Book Reference
+        <span>(Dix et al.)</span>
+      </h2>
+
+      <p>
+        Dix, A., Finlay, J., Abowd, G. D., &amp; Beale, R.
+        <em>Human–Computer Interaction</em>.
+      </p>
+
+   
+    </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer
-    style="
-      font-size: 14px;
-    "
-  >
-    <p>&copy; 2026 HCI–CG Course</p>
-    <p>
-      <a href="assignment01.html" style="color: #0645ad;">Lab 01 Instructions</a> |
-      <a href="https://github.com/humeraaa/hci-cg-2026" style="color: #0645ad;">Starter Code</a> |
-      <a href="https://humeraaa.github.io/hci-cg-2026/" style="color: #0645ad;">Live Demo</a>
-    </p>
+  <footer>
+    <p>&copy; CS-555 HCI – Week 05 Submission</p>
   </footer>
 
 </body>

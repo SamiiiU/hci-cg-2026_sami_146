@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Lab Practice – Common HTML & Accessibility Fixes</title>
+</head>
+
+<body
+  style="
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333333;
+  "
+>
+
+  <header>
+    <h1>Lab Practice (HTML Foundations)</h1>
+    <p>
+      This page practices identifying common structure and accessibility mistakes and writing corrected HTML.
+      The purpose is to strengthen clarity and evaluation thinking in interface design.
+    </p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="principles.html">HCI Principles</a></li>
+      <li><a href="models.html">Interaction Models</a></li>
+      <li><a href="practice.html" aria-current="page">Lab Practice</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+
+
+    <section style="background-color: #e7f3ff;">
+      <h2>
+        Part A: Find Mistakes (Identify + Fix)
+      </h2>
+
+      <p>
+        For each item: (1) identify the issue in one sentence, (2) write the corrected HTML.
+      </p>
+
+      <table border="1">
+        <caption>Common HTML structure and accessibility mistakes (practice format)</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Issue</th>
+            <th scope="col">Wrong HTML</th>
+            <th scope="col">Correct HTML</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Navigation link inside <code>ul</code> without <code>li</code></th>
+            <td>
+              <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt;
+    &lt;li&gt;&lt;a href="models.html"&gt;Models&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+            <td>
+              <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="models.html"&gt;Models&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">More than one <code>aria-current="page"</code> in the same menu</th>
+            <td>
+              <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html" aria-current="page"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="practice.html" aria-current="page"&gt;Practice&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+            <td>
+              <pre><code>&lt;nav aria-label="Primary navigation"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="practice.html" aria-current="page"&gt;Practice&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Label not connected to control (for/id mismatch)</th>
+            <td>
+              <pre><code>&lt;label for="msg"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;</code></pre>
+            </td>
+            <td>
+              <pre><code>&lt;label for="message"&gt;Message&lt;/label&gt;
+&lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;</code></pre>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Heading hierarchy skips a level</th>
+            <td>
+              <pre><code>&lt;h1&gt;Interaction Analysis&lt;/h1&gt;
+&lt;h3&gt;Norman vs GOMS&lt;/h3&gt;</code></pre>
+            </td>
+            <td>
+              <pre><code>&lt;h1&gt;Interaction Analysis&lt;/h1&gt;
+&lt;h2&gt;Norman vs GOMS&lt;/h2&gt;</code></pre>
+            </td>
+          </tr>
+
+          <tr>
+            <th scope="row">Comparison table missing caption + header cells</th>
+            <td>
+              <pre><code>&lt;table&gt;
+  &lt;tr&gt;&lt;td&gt;Model&lt;/td&gt;&lt;td&gt;Predicts&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;KLM&lt;/td&gt;&lt;td&gt;Time&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </td>
+            <td>
+              <pre><code>&lt;table&gt;
+  &lt;caption&gt;Models and what they predict&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Model&lt;/th&gt;
+      &lt;th scope="col"&gt;Predicts&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th scope="row"&gt;KLM&lt;/th&gt;
+      &lt;td&gt;Execution time&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        Part B: True / False
+      </h2>
+
+      <ul>
+        <li><strong>T/F:</strong> Every link inside <code>&lt;ul&gt;</code> must be inside an <code>&lt;li&gt;</code>.</li>
+        <li><strong>T/F:</strong> A page may have multiple <code>&lt;h1&gt;</code> headings to make text larger.</li>
+        <li><strong>T/F:</strong> <code>aria-current="page"</code> should be used only on the active navigation link.</li>
+        <li><strong>T/F:</strong> A form is accessible even if it has no <code>&lt;label&gt;</code> elements.</li>
+        <li><strong>T/F:</strong> KLM predicts execution time for expert, error-free performance.</li>
+      </ul>
+    </section>
+
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        Part C: Short Answer
+      </h2>
+
+      <ul>
+        <li>
+          Explain the difference between a semantic element (e.g., <code>nav</code>) and a generic element (e.g., <code>div</code>).
+        </li>
+        <li>
+          Why does KLM not model high-level planning and interpretation?
+        </li>
+      </ul>
+
+      <p>
+        Hint: KLM is an execution-level model. It predicts performance time using low-level operators,
+        and does not model interpretation, learning, or feedback processing.
+      </p>
+    </section>
+
+    <section style="background-color: #e7f3ff;">
+      <h2>Book Reference</h2>
+      <p>
+        Dix, A., Finlay, J., Abowd, G. D., &amp; Beale, R. <em>Human–Computer Interaction</em>.
+      </p>
+      <ul>
+        <li>Evaluation techniques</li>
+        <li>Cognitive models / KLM discussion</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>

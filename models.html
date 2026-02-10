@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Interaction Models – Norman, GOMS, and KLM</title>
+</head>
+
+<body
+  style="
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    color: #333333;
+  "
+>
+
+  <header>
+    <h1>Interaction Models in HCI</h1>
+    <p>
+      This page explains three core interaction models used in Human–Computer Interaction:
+      Norman’s Action Cycle, GOMS, and the Keystroke-Level Model (KLM).
+    </p>
+  </header>
+
+  <nav aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="principles.html">HCI Principles</a></li>
+      <li><a href="models.html" aria-current="page">Interaction Models</a></li>
+      <li><a href="practice.html">Lab Practice</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Norman -->
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        Norman’s Action Cycle
+        <span>(Chapter 3)</span>
+      </h2>
+
+      <p>
+        Norman’s Action Cycle describes interaction as a sequence of cognitive stages
+        that occur when a user attempts to achieve a goal using a system.
+      </p>
+
+      <ol>
+        <li>Form goal</li>
+        <li>Form intention</li>
+        <li>Specify action</li>
+        <li>Execute action</li>
+        <li>Perceive system state</li>
+        <li>Interpret system state</li>
+        <li>Evaluate outcome</li>
+      </ol>
+
+      <p>
+        The model highlights two key problems:
+        the <strong>Gulf of Execution</strong> (difficulty of performing actions)
+        and the <strong>Gulf of Evaluation</strong> (difficulty of understanding feedback).
+      </p>
+
+      <p>
+        <strong>Purpose:</strong>
+        Norman’s model is descriptive. It explains why users make mistakes
+        and how interface feedback affects understanding.
+      </p>
+    </section>
+
+    <!-- GOMS -->
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        GOMS Model
+        <span>(Chapter 12, Page# 422-424)</span>
+      </h2>
+
+      <p>
+        GOMS stands for <strong>Goals, Operators, Methods, and Selection Rules</strong>.
+        It models how an expert user performs a task in a structured, predictable manner.
+      </p>
+
+      <ul>
+        <li><strong>Goals:</strong> What the user wants to achieve</li>
+        <li><strong>Operators:</strong> Basic actions such as clicking or typing</li>
+        <li><strong>Methods:</strong> Sequences of operators to achieve a goal</li>
+        <li><strong>Selection Rules:</strong> Rules for choosing between methods</li>
+      </ul>
+
+      <p>
+        GOMS assumes error-free performance and does not model learning,
+        confusion, or interpretation.
+      </p>
+
+      <p>
+        <strong>Purpose:</strong>
+        GOMS is an analytic model used to compare task structures and efficiency.
+      </p>
+    </section>
+
+    <!-- KLM -->
+    <section style="background-color: #5e5e5e25;">
+      <h2>
+        Keystroke-Level Model (KLM)
+        <span>(Chapter 12 , Page# 436-437)</span>
+      </h2>
+
+      <p>
+        The Keystroke-Level Model (KLM) is a low-level instance of GOMS.
+        It predicts how long an expert user will take to complete a task.
+      </p>
+
+      <p>
+        KLM decomposes interaction into a small set of primitive operators:
+      </p>
+
+      <ul>
+        <li><strong>K</strong> – Keystroke or button press</li>
+        <li><strong>P</strong> – Pointing to a target</li>
+        <li><strong>H</strong> – Homing (switching hands)</li>
+        <li><strong>M</strong> – Mental preparation</li>
+        <li><strong>R</strong> – System response</li>
+      </ul>
+
+      <p>
+        Each operator has an associated time value, allowing prediction
+        of execution time for expert, error-free interaction.
+      </p>
+
+      <p>
+        <strong>Purpose:</strong>
+        KLM focuses on execution speed only. It does not model planning,
+        interpretation, or feedback.
+      </p>
+    </section>
+
+    <!-- Comparison -->
+    <section style="background-color: #e7f3ff;">
+      <h2>
+        Comparison Summary
+        <span>(Dix et al., Ch. 12, pp. 441–442)</span>
+      </h2>
+
+      <table border="1">
+        <caption>Comparison of Norman, GOMS, and KLM</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Model</th>
+            <th scope="col">Type</th>
+            <th scope="col">Explains</th>
+            <th scope="col">Predicts</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Norman</th>
+            <td>Descriptive</td>
+            <td>Understanding, feedback, errors</td>
+            <td>Nothing quantitative</td>
+          </tr>
+
+          <tr>
+            <th scope="row">GOMS</th>
+            <td>Analytic</td>
+            <td>Task structure for experts</td>
+            <td>Relative efficiency</td>
+          </tr>
+
+          <tr>
+            <th scope="row">KLM</th>
+            <td>Predictive</td>
+            <td>Execution-level actions</td>
+            <td>Execution time</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+
+  </main>
+
+  <footer>
+    <p><a href="index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
